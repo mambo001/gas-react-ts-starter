@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "../../dist/server", // Output directory
+    "rootDir": ".", // Input directory
+    "target": "ES6", // Target JavaScript version
+    "module": "commonjs", // Module system
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enable interop between CommonJS and ES Modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true // Ensure consistent casing in file names
+  },
+  "include": [
+    "./" // Include all files in the src/server directory
+  ]
+}
