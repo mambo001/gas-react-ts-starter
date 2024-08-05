@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && tsc -p src/server/tsconfig.json",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "gas": "chmod +x ./gas.sh && ./gas.sh",
+    "gas": "chmod +x ./scripts/gas.sh && ./scripts/gas.sh",
+    "login": "clasp login",
     "build-gas": "npm run build && npm run gas",
-    "deploy": "npm run build-gas && clasp push"
+    "deploy": "npm run build-gas && clasp push",
+    "setup": "rimraf .clasp.json && mkdirp dist && clasp create --type sheets --title \"My React Project\" --rootDir ./dist && mv ./dist/.clasp.json ./.clasp.json && rimraf dist"
   },
   "dependencies": {
     "react": "^18.3.1",

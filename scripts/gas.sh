@@ -41,4 +41,9 @@ cat ./dist/assets/index-*.css >>./gas/client/css.html
 echo "</style>" >>./gas/client/css.html
 echo -e "### GAS: css.html Created! ###"
 
-echo -e "\n### GAS: Done! ###\n"
+echo -e "\n### GAS Client: Done! ###\n"
+
+# Copy server files from ./dist/server to ./gas/server
+cp -r ./dist/server ./gas
+
+echo -e "\n### GAS Server: Done! ###\n"

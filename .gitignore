@@ -25,3 +25,6 @@ dist-ssr
 
 # GAS build files
 gas/*
+
+# GAS config files
+.clasp.json
