@@ -1,3 +1,3 @@
-function includes(filename: string) {
+export function includes(filename: string) {
   return HtmlService.createTemplateFromFile(filename).evaluate().getContent();
 }
