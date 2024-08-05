@@ -8,6 +8,7 @@ const onOpen = () => {
 };
 
 const openSampleSideBar = () => {
-  const html = HtmlService.createHtmlOutputFromFile("index");
+  const template = HtmlService.createTemplateFromFile("client/index");
+  const html = template.evaluate().setTitle("Sample Sidebar");
   SpreadsheetApp.getUi().showSidebar(html);
 };
